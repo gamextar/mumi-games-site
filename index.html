@@ -1,69 +1,466 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mumi Games - Próximamente</title>
-    <style>
-        /* Estilo moderno y minimalista */
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #fcfcfc; /* Un blanco suave */
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #555;
-        }
-
-        .container {
-            text-align: center;
-            padding: 20px;
-        }
-
-        .logo {
-            max-width: 480px; /* Tamaño ideal para el logo */
-            height: auto;
-            margin-bottom: 20px;
-            /* Suave animación de flotado */
-            animation: float 4s ease-in-out infinite;
-        }
-
-        h1 {
-            font-size: 1.5rem;
-            font-weight: 400;
-            letter-spacing: 1px;
-            margin-top: 10px;
-        }
-
-        .subtext {
-            font-size: 1rem;
-            color: #888;
-            margin-top: 5px;
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-        }
-
-        /* Responsive para móviles pequeños */
-        @media (max-width: 480px) {
-            .logo { max-width: 200px; }
-            h1 { font-size: 1.2rem; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MUMI GAMES — Juegos Divertidos y Seguros para Niños</title>
+  <meta name="description" content="MUMI GAMES crea juegos digitales divertidos, creativos y seguros para niños. Explora un mundo de imaginación y aventura.">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-    <div class="container">
-        <img src="logo.png" alt="Mumi Games Logo" class="logo">
-        <h1>Estamos creando algo mágico</h1>
-        <p class="subtext">Mumi Games LLC &copy; 2026</p>
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="nav-logo">
+        <img src="logo.png" alt="Mumi Games">
+      </a>
+      <ul class="nav-links">
+        <li><a href="#juegos">Juegos</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#porque-mumi">¿Por qué Mumi?</a></li>
+        <li><a href="#padres">Para Padres</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="#contacto" class="btn btn-primary">¡Juega Ahora!</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Cerrar menú">✕</button>
+    <a href="#juegos">Juegos</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#porque-mumi">¿Por qué Mumi?</a>
+    <a href="#padres">Para Padres</a>
+    <a href="#contacto" class="btn btn-primary">¡Juega Ahora!</a>
+  </div>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero" id="inicio">
+    <!-- Floating background shapes -->
+    <div class="hero-shapes">
+      <div class="hero-shape"></div>
+      <div class="hero-shape"></div>
+      <div class="hero-shape"></div>
+      <div class="hero-shape"></div>
+      <div class="hero-shape"></div>
+    </div>
+
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <span class="hero-badge">🎮 Nuevo mundo por explorar</span>
+        <h1>
+          Donde la diversión
+          <span>cobra vida</span>
+        </h1>
+        <p>Creamos juegos digitales llenos de creatividad, color y aventura. Un espacio seguro donde los niños exploran, aprenden y se divierten.</p>
+        <div class="hero-buttons">
+          <a href="#juegos" class="btn btn-primary">🕹️ Ver Juegos</a>
+          <a href="#nosotros" class="btn btn-outline" style="border-color:#fff;color:#fff;">Conócenos</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-blob"></div>
+        <div class="hero-illustration">
+          <img src="logo.png" alt="Mumi Games - Juegos para niños">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave Divider -->
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,50 1440,40 L1440,0 L0,0 Z" fill="#A78BFA"/>
+    </svg>
+  </div>
+
+  <!-- ========== GAMES SECTION ========== -->
+  <section class="games-section" id="juegos">
+    <div class="container">
+      <h2 class="section-title reveal">Nuestros Juegos 🎯</h2>
+      <p class="section-subtitle reveal">Cada juego es una nueva aventura. Mundos coloridos diseñados para despertar la imaginación.</p>
+
+      <div class="games-grid">
+
+        <!-- Game Card 1 -->
+        <div class="game-card reveal">
+          <div class="game-card-image">
+            <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="200" fill="#FF6B6B"/>
+              <circle cx="200" cy="90" r="50" fill="rgba(255,255,255,0.3)"/>
+              <circle cx="140" cy="120" r="30" fill="rgba(255,255,255,0.2)"/>
+              <circle cx="270" cy="70" r="25" fill="rgba(255,255,255,0.15)"/>
+              <text x="200" y="175" text-anchor="middle" fill="white" font-family="sans-serif" font-size="18" font-weight="bold">🏰</text>
+            </svg>
+            <span class="game-card-badge">✨ Nuevo</span>
+          </div>
+          <div class="game-card-body">
+            <h3>Mumi World</h3>
+            <p>Construye y explora tu propio mundo mágico lleno de sorpresas y personajes adorables.</p>
+            <div class="game-card-tags">
+              <span class="game-tag age">4+ años</span>
+              <span class="game-tag category">Creatividad</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Game Card 2 -->
+        <div class="game-card reveal">
+          <div class="game-card-image">
+            <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="200" fill="#4ECDC4"/>
+              <rect x="150" y="50" width="100" height="80" rx="15" fill="rgba(255,255,255,0.3)"/>
+              <circle cx="120" cy="130" r="35" fill="rgba(255,255,255,0.2)"/>
+              <circle cx="310" cy="60" r="20" fill="rgba(255,255,255,0.15)"/>
+              <text x="200" y="175" text-anchor="middle" fill="white" font-family="sans-serif" font-size="18" font-weight="bold">🎨</text>
+            </svg>
+          </div>
+          <div class="game-card-body">
+            <h3>Pinta Mumi</h3>
+            <p>Un estudio de arte digital donde los niños pintan, dibujan y crean sus propias obras maestras.</p>
+            <div class="game-card-tags">
+              <span class="game-tag age">3+ años</span>
+              <span class="game-tag category">Arte</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Game Card 3 -->
+        <div class="game-card reveal">
+          <div class="game-card-image">
+            <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="200" fill="#A78BFA"/>
+              <polygon points="200,30 240,120 160,120" fill="rgba(255,255,255,0.25)"/>
+              <circle cx="280" cy="140" r="40" fill="rgba(255,255,255,0.2)"/>
+              <circle cx="100" cy="60" r="25" fill="rgba(255,255,255,0.15)"/>
+              <text x="200" y="175" text-anchor="middle" fill="white" font-family="sans-serif" font-size="18" font-weight="bold">🚀</text>
+            </svg>
+          </div>
+          <div class="game-card-body">
+            <h3>Mumi Space</h3>
+            <p>¡Despega hacia las estrellas! Explora planetas, conoce alienígenas amigables y descubre galaxias.</p>
+            <div class="game-card-tags">
+              <span class="game-tag age">5+ años</span>
+              <span class="game-tag category">Aventura</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Game Card 4 -->
+        <div class="game-card reveal">
+          <div class="game-card-image">
+            <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="200" fill="#FFE66D"/>
+              <circle cx="200" cy="100" r="60" fill="rgba(255,255,255,0.35)"/>
+              <rect x="80" y="60" width="60" height="60" rx="10" fill="rgba(255,255,255,0.2)"/>
+              <circle cx="330" cy="50" r="30" fill="rgba(255,255,255,0.2)"/>
+              <text x="200" y="175" text-anchor="middle" fill="#5a4e00" font-family="sans-serif" font-size="18" font-weight="bold">🎵</text>
+            </svg>
+          </div>
+          <div class="game-card-body">
+            <h3>Mumi Music</h3>
+            <p>Crea melodías, toca instrumentos y descubre el ritmo en este estudio musical interactivo.</p>
+            <div class="game-card-tags">
+              <span class="game-tag age">3+ años</span>
+              <span class="game-tag category">Música</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Game Card 5 -->
+        <div class="game-card reveal">
+          <div class="game-card-image">
+            <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="200" fill="#FFA62B"/>
+              <ellipse cx="200" cy="100" rx="80" ry="50" fill="rgba(255,255,255,0.25)"/>
+              <circle cx="100" cy="140" r="25" fill="rgba(255,255,255,0.2)"/>
+              <circle cx="320" cy="60" r="35" fill="rgba(255,255,255,0.15)"/>
+              <text x="200" y="175" text-anchor="middle" fill="white" font-family="sans-serif" font-size="18" font-weight="bold">🧩</text>
+            </svg>
+          </div>
+          <div class="game-card-body">
+            <h3>Mumi Puzzle</h3>
+            <p>Rompecabezas coloridos y desafíos que estimulan la lógica y la resolución de problemas.</p>
+            <div class="game-card-tags">
+              <span class="game-tag age">4+ años</span>
+              <span class="game-tag category">Lógica</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Game Card 6 -->
+        <div class="game-card reveal">
+          <div class="game-card-image">
+            <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="200" fill="#6BCB77"/>
+              <rect x="130" y="40" width="140" height="90" rx="20" fill="rgba(255,255,255,0.25)"/>
+              <circle cx="80" cy="150" r="20" fill="rgba(255,255,255,0.2)"/>
+              <circle cx="350" cy="50" r="30" fill="rgba(255,255,255,0.15)"/>
+              <text x="200" y="175" text-anchor="middle" fill="white" font-family="sans-serif" font-size="18" font-weight="bold">🌿</text>
+            </svg>
+          </div>
+          <div class="game-card-body">
+            <h3>Mumi Nature</h3>
+            <p>Cuida animales, planta árboles y aprende sobre la naturaleza en este mundo verde y vibrante.</p>
+            <div class="game-card-tags">
+              <span class="game-tag age">3+ años</span>
+              <span class="game-tag category">Naturaleza</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="games-cta reveal">
+        <a href="#" class="btn btn-secondary">🎮 Ver Todos los Juegos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT SECTION ========== -->
+  <section class="about-section" id="nosotros">
+    <div class="about-deco"></div>
+    <div class="about-deco"></div>
+
+    <div class="container about-inner">
+      <div class="about-visual reveal-left">
+        <div class="about-image-wrapper">
+          <!-- Decorative gradient block (replace with team photo) -->
+        </div>
+        <div class="about-stat-float">
+          <div class="stat-number">1M+</div>
+          <div class="stat-label">Niños felices</div>
+        </div>
+      </div>
+
+      <div class="about-content reveal-right">
+        <h2>Somos <span>MUMI GAMES</span></h2>
+        <p>Un estudio creativo que diseña experiencias digitales pensadas para niños. Creemos que cada juego debe inspirar curiosidad, fomentar la creatividad y regalar momentos de pura diversión.</p>
+        <p>Nuestro equipo de diseñadores, desarrolladores y educadores trabaja para crear juegos que los padres aman y los niños no pueden dejar de jugar.</p>
+
+        <div class="about-values">
+          <div class="value-item">
+            <div class="value-icon coral">🎨</div>
+            <div>
+              <h4>Creatividad</h4>
+              <p>Diseños que inspiran imaginación</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon teal">🛡️</div>
+            <div>
+              <h4>Seguridad</h4>
+              <p>Entornos 100% seguros para niños</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon purple">📚</div>
+            <div>
+              <h4>Aprendizaje</h4>
+              <p>Jugar y aprender van de la mano</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon yellow">💛</div>
+            <div>
+              <h4>Diversión</h4>
+              <p>Sonrisas en cada interacción</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FEATURES SECTION ========== -->
+  <section class="features-section" id="porque-mumi">
+    <div class="container">
+      <h2 class="section-title reveal">¿Por qué elegir Mumi? 💡</h2>
+      <p class="section-subtitle reveal">Diseñamos cada detalle pensando en los pequeños exploradores y en la tranquilidad de sus padres.</p>
+
+      <div class="features-grid">
+        <div class="feature-card reveal">
+          <div class="feature-icon">🎭</div>
+          <h3>Juego Libre</h3>
+          <p>Sin reglas fijas: los niños deciden cómo jugar, fomentando su autonomía y creatividad natural.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">🔒</div>
+          <h3>Sin Anuncios</h3>
+          <p>Cero publicidad, cero compras sorpresa. Un espacio digital limpio y respetuoso.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">🌈</div>
+          <h3>Inclusivo</h3>
+          <p>Juegos diversos que representan a todos los niños. Personajes, culturas y capacidades diversas.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">📱</div>
+          <h3>Multiplataforma</h3>
+          <p>Disponible en iOS, Android y web. Juega donde quieras, cuando quieras.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PARENTS SECTION ========== -->
+  <section class="parents-section" id="padres">
+    <div class="container parents-inner">
+      <div class="parents-content reveal-left">
+        <h2>Diseñado para niños, aprobado por padres 👨‍👩‍👧‍👦</h2>
+        <p>Entendemos que la seguridad digital es una prioridad. Por eso construimos cada juego con los más altos estándares de privacidad y protección infantil.</p>
+
+        <div class="safety-list">
+          <div class="safety-item">
+            <div class="safety-icon">🔐</div>
+            <div>
+              <h4>Privacidad Primero</h4>
+              <p>No recopilamos datos personales de los niños. Cumplimos con COPPA y GDPR-K.</p>
+            </div>
+          </div>
+          <div class="safety-item">
+            <div class="safety-icon">🚫</div>
+            <div>
+              <h4>Sin Contenido Externo</h4>
+              <p>Sin enlaces externos, redes sociales ni contenido generado por terceros.</p>
+            </div>
+          </div>
+          <div class="safety-item">
+            <div class="safety-icon">⏰</div>
+            <div>
+              <h4>Control Parental</h4>
+              <p>Herramientas para que los padres gestionen tiempo de pantalla y acceso.</p>
+            </div>
+          </div>
+          <div class="safety-item">
+            <div class="safety-icon">✅</div>
+            <div>
+              <h4>Contenido Verificado</h4>
+              <p>Cada juego es revisado por educadores y expertos en desarrollo infantil.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="parents-visual reveal-right">
+        <div class="parents-illustration">
+          <!-- Inline SVG illustration: parent + child with device -->
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+            <!-- Background circle -->
+            <circle cx="200" cy="200" r="180" fill="#F0F7FF"/>
+            <!-- Decorative circles -->
+            <circle cx="320" cy="80" r="20" fill="#FFE66D" opacity="0.6"/>
+            <circle cx="80" cy="100" r="15" fill="#FF8C94" opacity="0.5"/>
+            <circle cx="340" cy="300" r="12" fill="#4ECDC4" opacity="0.5"/>
+            <!-- Device/tablet -->
+            <rect x="130" y="150" width="140" height="100" rx="12" fill="#2D3436"/>
+            <rect x="136" y="156" width="128" height="82" rx="6" fill="#4ECDC4"/>
+            <!-- Screen content -->
+            <circle cx="175" cy="187" r="12" fill="rgba(255,255,255,0.4)"/>
+            <circle cx="210" cy="197" r="8" fill="rgba(255,255,255,0.3)"/>
+            <rect x="155" y="210" width="90" height="8" rx="4" fill="rgba(255,255,255,0.3)"/>
+            <!-- Stars around -->
+            <text x="120" y="130" font-size="24">⭐</text>
+            <text x="280" y="170" font-size="20">✨</text>
+            <text x="150" y="300" font-size="22">💛</text>
+            <text x="260" y="320" font-size="18">🌟</text>
+            <!-- Hearts -->
+            <text x="100" y="250" font-size="16">❤️</text>
+            <text x="300" y="220" font-size="14">💜</text>
+            <!-- Shield icon (safety) -->
+            <g transform="translate(180, 270)">
+              <path d="M20,0 L40,10 L40,25 C40,40 30,48 20,52 C10,48 0,40 0,25 L0,10 Z" fill="#4ECDC4"/>
+              <path d="M14,26 L18,30 L28,18" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA / NEWSLETTER SECTION ========== -->
+  <section class="cta-section" id="contacto">
+    <div class="cta-shapes">
+      <div class="cta-shape"></div>
+      <div class="cta-shape"></div>
+      <div class="cta-shape"></div>
+    </div>
+    <div class="container cta-content">
+      <h2 class="reveal">¡No te pierdas nada! 🎉</h2>
+      <p class="reveal">Suscríbete para recibir noticias sobre nuevos juegos, actualizaciones y contenido exclusivo para la familia.</p>
+      <form class="cta-form reveal" onsubmit="return false;">
+        <input type="email" placeholder="Tu correo electrónico" required autocomplete="email">
+        <button type="submit">Suscribirse</button>
+      </form>
+      <p class="cta-privacy reveal">🔒 Respetamos tu privacidad. No spam, lo prometemos.</p>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="logo.png" alt="Mumi Games">
+          <p>Creamos mundos divertidos y seguros para los pequeños exploradores digitales.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram">📸</a>
+            <a href="#" aria-label="YouTube">🎬</a>
+            <a href="#" aria-label="TikTok">🎵</a>
+            <a href="#" aria-label="Twitter">🐦</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Juegos</h4>
+          <a href="#">Mumi World</a>
+          <a href="#">Pinta Mumi</a>
+          <a href="#">Mumi Space</a>
+          <a href="#">Mumi Music</a>
+          <a href="#">Mumi Puzzle</a>
+          <a href="#">Mumi Nature</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Compañía</h4>
+          <a href="#nosotros">Sobre Nosotros</a>
+          <a href="#">Carreras</a>
+          <a href="#">Prensa</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Soporte</h4>
+          <a href="#">Centro de Ayuda</a>
+          <a href="#padres">Para Padres</a>
+          <a href="#">Accesibilidad</a>
+          <a href="#">Reportar un Problema</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Mumi Games LLC. Todos los derechos reservados.</span>
+        <div class="footer-bottom-links">
+          <a href="#">Política de Privacidad</a>
+          <a href="#">Términos de Uso</a>
+          <a href="#">Política de Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Volver arriba">↑</button>
+
+  <!-- ========== JAVASCRIPT ========== -->
+  <script src="js/main.js"></script>
 
 </body>
 </html>
