@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mumi Games - Próximamente</title>
+    <style>
+        /* Estilo moderno y minimalista */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #fcfcfc; /* Un blanco suave */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #555;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .logo {
+            max-width: 480px; /* Tamaño ideal para el logo */
+            height: auto;
+            margin-bottom: 20px;
+            /* Suave animación de flotado */
+            animation: float 4s ease-in-out infinite;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            margin-top: 10px;
+        }
+
+        .subtext {
+            font-size: 1rem;
+            color: #888;
+            margin-top: 5px;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Responsive para móviles pequeños */
+        @media (max-width: 480px) {
+            .logo { max-width: 200px; }
+            h1 { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="logo.png" alt="Mumi Games Logo" class="logo">
+        <h1>Estamos creando algo mágico</h1>
+        <p class="subtext">Mumi Games LLC &copy; 2026</p>
+    </div>
+
+</body>
+</html>
